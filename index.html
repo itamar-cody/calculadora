@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Calculadora - do zero</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="calculadora">
+    <div class="visor">
+      <input id="display" type="text" readonly aria-label="Visor da calculadora">
+    </div>
+
+    <div id="grid" class="botoes">
+      <!-- use data-value / data-action -->
+      <button data-action="mem" data-value="M+">M+</button>
+      <button data-action="mem" data-value="M-">M-</button>
+      <button data-action="mem" data-value="MRC">MRC</button>
+      <button data-action="clear">C</button>
+
+      <button data-action="digit" data-value="7">7</button>
+      <button data-action="digit" data-value="8">8</button>
+      <button data-action="digit" data-value="9">9</button>
+      <button data-action="op" data-value="/">÷</button>
+
+      <button data-action="digit" data-value="4">4</button>
+      <button data-action="digit" data-value="5">5</button>
+      <button data-action="digit" data-value="6">6</button>
+      <button data-action="op" data-value="*">×</button>
+
+      <button data-action="digit" data-value="1">1</button>
+      <button data-action="digit" data-value="2">2</button>
+      <button data-action="digit" data-value="3">3</button>
+      <button data-action="op" data-value="-">−</button>
+
+      <button data-action="digit" data-value="0">0</button>
+      <button data-action="digit" data-value="00">00</button>
+      <button data-action="digit" data-value=".">.</button>
+      <button data-action="op" data-value="+">+</button>
+
+      <button data-action="back">⌫</button>
+      <button data-action="equals" style="grid-column: span 3;">=</button>
+    </div>
+  </main>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(160deg, #2f2f2f, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== CAIXA PRINCIPAL ===== */
+.calculadora {
+  background: #222;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  width: 300px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== VISOR ===== */
+.visor {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  background: #e6e6e6;
+  border: none;
+  border-radius: 10px;
+  font-size: 26px;
+  text-align: right;
+  padding: 10px 15px;
+  color: #000;
+  font-weight: bold;
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* ===== BOTÕES ===== */
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+button {
+  height: 55px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  background: #333;
+  box-shadow: 0 3px 0 #000;
+  transition: all 0.15s ease;
+}
+
+/* EFEITO DE CLIQUE */
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #000;
+}
+
+/* ===== CORES DIFERENCIADAS ===== */
+
+/* Botões de limpar (C) */
+button[data-action="clear"] {
+  background: #d93025;
+}
+
+/* Botões de operações */
+button[data-action="op"] {
+  background: #555;
+}
+
+/* Botão de igual */
+button[data-action="equals"] {
+  background: #0a84ff;
+  color: #fff;
+  font-size: 22px;
+}
+
+/* Botões de memória */
+button[data-action="mem"] {
+  background: #444;
+  color: #ffcc00;
+}
+
+/* Botão backspace (⌫) */
+button[data-action="back"] {
+  background: #888;
+  color: #111;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 400px) {
+  .calculadora {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #display {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  button {
+    height: 45px;
+    font-size: 16px;
+  }
+}
